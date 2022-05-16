@@ -21,10 +21,10 @@ public class Client {
         dp.setData(s.getBytes());
         ds.send(dp);
 
+        DatagramPacket dp2 = new DatagramPacket(b,b.length, InetAddress.getByName("127.0.0.1"),8888);
+        ds.receive(dp2);
 
-        ds.receive(dp);
-
-        byte[] data = dp.getData();
+        byte[] data = dp2.getData();
         String g = new String(data);
         System.out.println(g);
 

@@ -4,7 +4,7 @@ package com.company.thread;
  * @Auther: zzx
  * @Date: 2022.05.22/5/8
  */
-public class Train extends Thread{
+class Train extends Thread{
     static int count = 100;
     String lock = "lock";
     @Override
